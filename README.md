@@ -1,6 +1,6 @@
 # MyAskAI-powered Chatbot for Squarespace Websites
 
-This chatbot plugin is designed for Squarespace-powered websites and allows visitors to ask questions and receive answers from MyAskAI, a ChatGPT-style LLM service that you can configure with your own links, content and files along with pre-trained model content from OpenAI. 
+This chatbot plugin is designed for Squarespace-powered websites and allows visitors to ask questions and receive answers from [MyAskAI](https://myaskai.com?via=de1v7wwv3adx135kl6mq), a ChatGPT-style LLM service that you can configure with your own links, content and files along with pre-trained model content from OpenAI. 
 
 Note that this code should also work on other types of website CMSs that allow CSS and Javascript code-injection on pages.
 
