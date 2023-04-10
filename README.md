@@ -31,11 +31,11 @@ and the following placeholder value in the chatbot.css file:
 
 2. Log in to your Squarespace account and navigate to Pages > Not Linked, press the "+" button and choose Link.
 3. In the link editor, click the gear icon in the URL field, then click the File tab.
-4. Click Upload File and select the chatbot.js file to upload. After uploading, click the chatbot.js file in the list. A checkmark appears beside the chosen file.
-5. Click Save, make a note of the link URL (usually /s/chatbot.js) and then press Close.
-6. Repeat steps 2-5 to upload the chatbot.css file and make a note of its URL, which is also typically /s/chatbot.css
+4. Click Upload File and select the chatbot.js file to upload. After uploading, click the `chatbot.js` file in the list. A checkmark appears beside the chosen file.
+5. Click Save, make a note of the link URL (usually `/s/chatbot.js`) and then press Close.
+6. Repeat steps 2-5 to upload the chatbot.css file and make a note of its URL, which is also typically `/s/chatbot.css`
 7. Still within the Squarespace website editor, navigate to Settings > Advanced > Code Injection.
-8. In the "Footer" section, add the following code, replacing `path/to` with your website URL and folder where the chatbot.js file was uploaded, for example `https://rittmananalytics.com/s/`
+8. In the "Footer" section, add the following code, replacing `path/to` with your website URL and folder where the `chatbot.js` file was uploaded, for example `https://rittmananalytics.com/s/`
 
 `<script src="path/to/chatbot-plugin.js"></script>`
 
