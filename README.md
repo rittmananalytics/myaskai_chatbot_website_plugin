@@ -21,22 +21,34 @@ The chatbot plugin displays a floating icon on the bottom right-hand corner of t
 
 To install the chatbot plugin on your Squarespace website, follow these steps:
 
-1. Log in to your Squarespace account and go to your website editor.
-2. Go to Settings > Advanced > Code Injection.
-3. Copy the content of `chatbot.html` and paste it into the Footer section.
-4. Update the following variables in the code with your own values:
-
+1. Clone this repo to your local filesystem, and replace the following placeholder values in the chatbot.js file:
 - `<YOUR_ID>`: Replace this with your unique ID.
 - `<YOUR_API_KEY>`: Replace this with your API key.
 - `<YOUR_CHATBOT_PROMPT>`: Replace this with your custom chatbot prompt text.
+
+and the following placeholder value in the chatbot.css file:
 - `<YOUR_CHATBOT_ICON_IMAGE_URL>`: Replace this with the URL of your chatbot icon image.
 
-5. Save the changes.
+2. Log in to your Squarespace account and navigate to Pages > Not Linked, press the "+" button and choose Link.
+3. In the link editor, click the gear icon in the URL field, then click the File tab.
+4. Click Upload File and select the chatbot.js file to upload. After uploading, click the chatbot.js file in the list. A checkmark appears beside the chosen file.
+5. Click Save, make a note of the link URL (usually /s/chatbot.js) and then press Close.
+6. Repeat steps 2-5 to upload the chatbot.css file and make a note of its URL, which is also typically /s/chatbot.css
+7. Still within the Squarespace website editor, navigate to Settings > Advanced > Code Injection.
+8. In the "Footer" section, add the following code, replacing `path/to` with your website URL and folder where the chatbot.js file was uploaded, for example `https://rittmananalytics.com/s/`
+
+`<script src="path/to/chatbot-plugin.js"></script>`
+
+9. In the "Header" section, add the following code, replacing `path/to` with your website URL and folder where the chatbot.css file was uploaded, for example `https://rittmananalytics.com/s/`
+
+`<link rel="stylesheet" href="path/to/chatbot.css" />`
+
+10. Save the changes.
 
 After completing these steps, the chatbot plugin should be active on your Squarespace website.
 
 ## Customization
 
-You can further customize the chatbot appearance by editing the CSS styles in the `chatbot.html` file. If you want to modify the chatbot behavior, you can update the JavaScript code in the `chatbot.html` file.
+You can further customize the chatbot appearance by editing the CSS styles in the `chatbot.css` file. If you want to modify the chatbot behavior, you can update the JavaScript code in the `chatbot.js` file.
 
 Please note that you need to have some knowledge of HTML, CSS, and JavaScript to make these customizations.
