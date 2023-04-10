@@ -21,7 +21,19 @@ The chatbot plugin displays a floating icon on the bottom right-hand corner of t
 <img src='https://github.com/rittmananalytics/myaskai_chatbot_website_plugin/blob/main/images/dialog.png?raw=true' width="200"/>
 
 4. The plugin sends the user's question to the MyAsKAI REST API endpoint.
-5. The API responds with the answer, which is then displayed in the chatbot dialog.
+
+```
+POST https://myaskai.com/api/1.1/wf/ask-ai-query
+{
+    "id": "<YOUR_ID>",
+    "api_key": "<YOUR_API_KEY>",
+    "query": "<YOUR_QUESTION>"
+}
+```
+
+where `<YOUR_QUESTION>` contains the question that the user typed into the prompt. 
+
+6. The API responds with the answer, which is then displayed in the chatbot dialog.
 
 <img src='https://github.com/rittmananalytics/myaskai_chatbot_website_plugin/blob/main/images/answer.png?raw=true' width="200"/>
 
