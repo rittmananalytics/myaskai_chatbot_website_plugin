@@ -10,6 +10,8 @@ To sign-up for your own MyAskAI account to power your chatbot, use this link: [C
 
 The chatbot plugin displays a floating icon on the bottom right-hand corner of the user's screen. When clicked, it opens a dialog with an input box to type questions. The chatbot communicates with a REST API endpoint to get answers to the user's questions.
 
+<img src='https://user-images.githubusercontent.com/3772831/230965123-8d6c8eb0-e69f-4cf9-be0d-8dbf49ac2b27.png' width="50"/>
+
 ## How it works
 
 1. When the user clicks on the chatbot icon, it displays a dialog with an input box and a chatbot prompt.
