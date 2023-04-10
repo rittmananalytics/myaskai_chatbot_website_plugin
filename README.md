@@ -10,14 +10,20 @@ To sign-up for your own MyAskAI account to power your chatbot, use this link: [C
 
 The chatbot plugin displays a floating icon on the bottom right-hand corner of the user's screen. When clicked, it opens a dialog with an input box to type questions. The chatbot communicates with a REST API endpoint to get answers to the user's questions.
 
-<img src='https://user-images.githubusercontent.com/3772831/230965123-8d6c8eb0-e69f-4cf9-be0d-8dbf49ac2b27.png' width="50"/>
-
 ## How it works
 
 1. When the user clicks on the chatbot icon, it displays a dialog with an input box and a chatbot prompt.
+
+<img src='https://user-images.githubusercontent.com/3772831/230965123-8d6c8eb0-e69f-4cf9-be0d-8dbf49ac2b27.png' width="100"/>
+
 2. The user types their question in the input box and presses Enter.
-3. The plugin sends the user's question to the MyAsKAI REST API endpoint.
-4. The API responds with the answer, which is then displayed in the chatbot dialog.
+
+<img src='https://github.com/rittmananalytics/myaskai_chatbot_website_plugin/blob/main/images/dialog.png?raw=true' width="200"/>
+
+4. The plugin sends the user's question to the MyAsKAI REST API endpoint.
+5. The API responds with the answer, which is then displayed in the chatbot dialog.
+
+<img src='https://github.com/rittmananalytics/myaskai_chatbot_website_plugin/blob/main/images/answer.png?raw=true' width="200"/>
 
 ## Installation
 
