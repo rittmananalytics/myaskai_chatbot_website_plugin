@@ -16,7 +16,7 @@ An example of this chatbot running "live" is at [https://www.rittmananalytics.co
 
 1. When the user clicks on the chatbot icon, it displays a dialog with an input box and a chatbot prompt.
 
-<img src='https://user-images.githubusercontent.com/3772831/230965123-8d6c8eb0-e69f-4cf9-be0d-8dbf49ac2b27.png' width="100"/>
+<img src='https://github.com/rittmananalytics/myaskai_chatbot_website_plugin/blob/main/images/icon.gif?raw=true' width="100"/>
 
 2. The user types their question in the input box and presses Enter.
 
