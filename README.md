@@ -12,6 +12,8 @@ The chatbot plugin displays a floating icon on the bottom right-hand corner of t
 
 An example of this chatbot running "live" is at [https://www.rittmananalytics.com/](https://www.rittmananalytics.com/).
 
+https://user-images.githubusercontent.com/3772831/231012586-177d77a5-6cf5-442e-adb0-ede0fcac164f.mov
+
 ## How it works
 
 1. When the user clicks on the chatbot icon, it displays a dialog with an input box and a chatbot prompt.
