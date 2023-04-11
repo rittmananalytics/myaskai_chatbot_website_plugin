@@ -9,22 +9,49 @@ function submitQuestion(question, outputContainer, inputContainer) {
     })
   };
 
-  fetch('https://myaskai.com/api/1.1/wf/ask-ai-query', requestOptions)
-    .then((response) => response.json())
-    .then((data) => {
-      if (data.hasOwnProperty('answer')) {
-        const answer = data.answer.replace(/(?:\r\n|\r|\n)/g, '<br>');
-        outputContainer.innerHTML = answer;
-        outputContainer.style.display = 'block';
-        inputContainer.style.display = 'none';
-      } else {
-        outputContainer.innerHTML = 'Sorry, I could not get the answer. Please try again later.';
+fetch('https://myaskai.com/api/1.1/wf/ask-ai-query', requestOptions)
+  .then((response) => response.json())
+  .then((data) => {
+    if (data.hasOwnProperty('answer')) {
+      const answer = data.answer.replace(/(?:\r\n|\r|\n)/g, '<br>');
+      outputContainer.innerHTML = answer.replaceAll('.', '.<br><br>'); 
+      outputContainer.style.display = 'block';
+      inputContainer.style.display = 'none';
+
+      // Handle references
+      if (data.hasOwnProperty('references') && data.references.length > 0) {
+        const referencesContainer = document.createElement('div');
+        referencesContainer.classList.add('chatbot-references');
+
+        const referencesHeading = document.createElement('p');
+        referencesHeading.textContent = 'Answer Sources:';
+        referencesContainer.appendChild(referencesHeading);
+
+        const referencesList = document.createElement('ul');
+
+        data.references.forEach((reference) => {
+          if (reference.hasOwnProperty('link') && reference.hasOwnProperty('title')) {
+            const listItem = document.createElement('li');
+            const link = document.createElement('a');
+            link.href = reference.link;
+            link.target = '_blank';
+            link.textContent = reference.title;
+            listItem.appendChild(link);
+            referencesList.appendChild(listItem);
+          }
+        });
+
+        referencesContainer.appendChild(referencesList);
+        outputContainer.appendChild(referencesContainer);
       }
-    })
-    .catch((error) => {
-      console.error('Error:', error);
+    } else {
       outputContainer.innerHTML = 'Sorry, I could not get the answer. Please try again later.';
-    });
+    }
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+    outputContainer.innerHTML = 'Sorry, I could not get the answer. Please try again later.';
+  });
 }
 
 document.addEventListener('DOMContentLoaded', function () {
